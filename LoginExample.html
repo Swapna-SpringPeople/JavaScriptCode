@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title>
+</head>
+<body>
+<script type="text/javascript"> 
+	function validateFormData()
+	{
+		if (document.getElementById("fname") == null || document.getElementById("fname") == "")
+		//if (document.forms[0].getElementById("fname") == null || document.forms[0].getElementById("fname") == "" )
+ 		//if (document.forms[0]["fname"].value == null || document.forms[0]["fname"].value == "" )	
+ 		//if (document.forms[0].fname.value == null || document.forms[0].fname.value == "" )				
+		{
+			document.write("First Name is mandatory");
+			//return false;
+		}	
+		if (document.getElementById("lname") == null || document.getElementById("lname") == "")
+		{
+			document.write("First Name is mandatory");
+			//return false;
+		}
+		if (document.getElementById("email") == null || document.getElementById("email") == "")
+		{
+			document.write("email is mandatory");
+			//return false;
+		}
+
+		if (document.getElementById("userid") == null || document.getElementById("userid") == "")
+		{
+			document.write("userid is mandatory");
+			//return false;
+		}
+		
+		if (document.getElementById("password") == null || document.getElementById("password") == "")
+		{
+			document.write("password is mandatory");
+			//return false;
+		} 
+	}
+</script>
+<form>
+	<table>
+		<tr>
+			<tr>
+				<td> Enter First Name  </td>
+				<td> <input type = "text" id ="fname" name="fname"/> </td>
+			</tr>
+			<tr>
+				<td> Enter Last Name </td>
+				<td> <input type = "text" id ="lname" name="lname"/> </td>
+			</tr>
+			<tr>
+				<td> Enter Email Id </td>
+				<td><input type = "text" id ="email" name="email"/> </td>
+			</tr>
+			<tr>
+				<td> Enter User Name </td>
+				<td> <input type = "text" id ="userid" name="userid"/> </td>
+			</tr>
+			<tr>
+				<td> Enter Password </td>
+				<td><input type = "text" id ="password" name="password"/> </td>
+			</tr>
+			<td align=center> <button type = "submit" id ="submit" name="submit" value = "submit" onsubmit="validateFormData()">Submit</button> </td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
